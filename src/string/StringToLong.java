@@ -8,6 +8,7 @@ public class StringToLong {
 	 * 
 	 * @param charSeq
 	 * @return
+	 * 
 	 * @throws NumberFormatException
 	 * @throws Exception
 	 */
