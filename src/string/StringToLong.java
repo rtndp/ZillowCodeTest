@@ -3,6 +3,7 @@ package string;
 public class StringToLong {
 
 	/**
+	 * Test
 	 * Method to convert String to long
 	 * 
 	 * @param charSeq
