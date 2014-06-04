@@ -291,12 +291,14 @@ public class StringToLong {
 			 * All exceptions relating to number format are handled here
 			 */
 			System.out.println(numberFormatException.toString());
+			numberFormatException.printStackTrace();
 
 		} catch (Exception exception) {
 			/**
 			 * Any other types of exceptions are handled here
 			 */
 			System.out.println(exception.toString());
+			exception.printStackTrace();
 
 		}
 
