@@ -57,8 +57,8 @@ public class TrinaryTree {
 	}
 
 	/**
-	 * This public method is called on a TrinaryTree object to insert a
-	 * node in the tree.
+	 * This public method is called on a TrinaryTree object to insert a node in
+	 * the tree.
 	 * 
 	 * @param value
 	 * 
@@ -85,7 +85,8 @@ public class TrinaryTree {
 
 		/**
 		 * Similar to the BST, if the value of the node to be inserted is less
-		 * than the root, insertHelper is recursively called on the left subtree.
+		 * than the root, insertHelper is recursively called on the left
+		 * subtree.
 		 */
 		if (value < root.value)
 			root.left = insertHelper(root.left, value);
@@ -142,10 +143,10 @@ public class TrinaryTree {
 		/**
 		 * This condition handles the case where the tree is null
 		 */
-		if (root == null){
-			System.out.println("Node with value - "+key+" not found");
+		if (root == null) {
+			System.out.println("Node with value - " + key + " not found");
 			return root = null;
-		
+
 		}
 		/**
 		 * Similar to traditional BST, the search for the required key proceeds
@@ -217,15 +218,15 @@ public class TrinaryTree {
 	}
 
 	/**
-	 * This private helper function assists the delete method in looking up
-	 * the minimum value in the tree rooted at node passed as a parameter 
-	 * to this method
-	 *  
+	 * This private helper function assists the delete method in looking up the
+	 * minimum value in the tree rooted at node passed as a parameter to this
+	 * method
+	 * 
 	 * @param root
 	 * @return
 	 */
 	private Node findMin(Node root) {
-		
+
 		if (root.left == null)
 			return root;
 
@@ -234,7 +235,7 @@ public class TrinaryTree {
 		 */
 		return findMin(root.left);
 	}
-	
+
 	/**
 	 * This private helper function assists the delete method in deleting the
 	 * smallest node in the tree or the specific subtree
@@ -245,7 +246,7 @@ public class TrinaryTree {
 	private Node removeMin(Node root) {
 		if (root.left == null)
 			return root.right;
-		
+
 		root.left = removeMin(root.left);
 
 		return root;
@@ -263,8 +264,8 @@ public class TrinaryTree {
 	}
 
 	/**
-	 * This private helper method assists the print method in displaying
-	 * the entire tree.
+	 * This private helper method assists the print method in displaying the
+	 * entire tree.
 	 * 
 	 * The traversal considered for this print method - INORDER
 	 * 
@@ -281,102 +282,193 @@ public class TrinaryTree {
 		printHelper(root.right);
 
 	}
-	
+
 	/**
 	 * I have written this main method to perform the necessary tests.
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		TrinaryTree tree = new TrinaryTree();
 
+		/**
+		 * Trying to delete before inserting anything to the tree
+		 */
 		System.out.println("---");
 		tree.delete(9);
 		tree.print();
-		
+
+		/**
+		 * Insert a new node with value 5
+		 */
 		tree.insert(5);
-		
+
+		/**
+		 * Insert a new node with value 4
+		 */
 		tree.insert(4);
-		
+
+		/**
+		 * Insert a new node with value 9
+		 */
 		tree.insert(9);
-		
+
+		/**
+		 * Insert a new node with value 9. Print the tree. [The method is
+		 * programmed to print the tree in-order
+		 */
 		System.out.println("---");
 		tree.insert(9);
 		tree.print();
-		
+
+		/**
+		 * Insert a new node with value 5
+		 */
 		tree.insert(5);
-		
+
+		/**
+		 * Insert a new node with value 7
+		 */
 		tree.insert(7);
-		
+
+		/**
+		 * Insert a new node with value 2. Print the tree.
+		 */
 		System.out.println("---");
 		tree.insert(2);
 		tree.print();
-		
-		
+
+		/**
+		 * Insert a new node with value 2
+		 */
 		tree.insert(2);
-		
+
+		/**
+		 * Insert a new node with value 5
+		 */
 		tree.insert(5);
-		
+
+		/**
+		 * Insert a new node with value 5
+		 */
 		tree.insert(5);
-		
+
+		/**
+		 * Insert a new node with value 3
+		 */
 		tree.insert(3);
-		
+
+		/**
+		 * Insert a new node with value 12
+		 */
 		tree.insert(12);
-		
+
+		/**
+		 * Insert a new node with value 11
+		 */
 		tree.insert(11);
-		
+
+		/**
+		 * Insert a new node with value 13
+		 */
 		tree.insert(13);
-		
+
+		/**
+		 * Insert a new node with value 6
+		 */
 		tree.insert(6);
-		
+
+		/**
+		 * Insert a new node with value 1. Print the tree.
+		 */
+		System.out.println("---");
 		tree.insert(1);
-
-		System.out.println("---");
 		tree.print();
 
-		System.out.println("---");
-		tree.delete(9);
-		tree.print();
-
+		/**
+		 * Delete a node with value 9. Print the tree.
+		 */
 		System.out.println("---");
 		tree.delete(9);
 		tree.print();
 
+		/**
+		 * Delete a node with value 9
+		 */
+		System.out.println("---");
+		tree.delete(9);
+		tree.print();
+
+		/**
+		 * Delete a node with value 18. The Node with value 18 is not present in
+		 * the tree.
+		 */
 		System.out.println("---");
 		tree.delete(18);
 		tree.print();
 
+		/**
+		 * Delete a node with value 11.
+		 */
 		System.out.println("---");
 		tree.delete(11);
 		tree.print();
 
+		/**
+		 * Delete a node with value 13.
+		 */
 		System.out.println("---");
 		tree.delete(13);
 		tree.print();
 
+		/**
+		 * Delete a node with value 5.
+		 */
 		System.out.println("---");
 		tree.delete(5);
 		tree.print();
 
+		/**
+		 * Delete a node with value 5.
+		 */
 		System.out.println("---");
 		tree.delete(5);
 		tree.print();
 
+		/**
+		 * Delete a node with value 5.
+		 */
 		System.out.println("---");
 		tree.delete(5);
 		tree.print();
 
+		/**
+		 * Delete a node with value 5.
+		 */
 		System.out.println("---");
 		tree.delete(5);
 		tree.print();
 
+		/**
+		 * Delete a node with value 5. The node with value 5 is not present in
+		 * the tree.
+		 */
 		System.out.println("---");
 		tree.delete(5);
 		tree.print();
 
+		/**
+		 * Delete a node with value 5. The node with value 5 is not present in
+		 * the tree.
+		 */
 		System.out.println("---");
 		tree.delete(5);
 		tree.print();
 
+		/**
+		 * Delete a node with value 5. The node with value 5 is not present in
+		 * the tree.
+		 */
 		System.out.println("---");
 		tree.delete(5);
 		tree.print();
