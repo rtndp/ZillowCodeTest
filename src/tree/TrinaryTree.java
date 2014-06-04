@@ -282,6 +282,10 @@ public class TrinaryTree {
 
 	}
 	
+	/**
+	 * I have written this main method to perform the necessary tests.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		TrinaryTree tree = new TrinaryTree();
 
